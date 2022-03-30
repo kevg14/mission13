@@ -1,0 +1,58 @@
+﻿@{
+    // Set the tab title
+    ViewData["Title"] = "Edit Bowler";
+
+}
+
+<!--Link the model for this page-->
+@model Bowler
+<!-- Page Title-->
+
+<h2>Edit your Bowler:</h2>
+
+<!-- Display the time slot the user is currently reserving -->
+
+
+<form method="post">
+
+    <!-- Throw error message if invalid entries made -->
+    <div asp-validation-summary="All"></div>
+
+    <!-- Basic form -->
+    <div class="form-group">
+
+        <!--Hidden field for the personid-->
+        <input type="hidden" asp-for="BowlerID" />
+
+
+        <label asp-for="BowlerFirstName">Bowler's First Name</label>
+        <input asp-for="BowlerFirstName" class="form-control" />
+
+        <label asp-for="BowlerLastName">Bowler's Last Name</label>
+        <input asp-for="BowlerLastName" class="form-control" />
+
+        <label asp-for="BowlerMiddleInit">Bowler Middle Initial</label>
+        <input asp-for="BowlerMiddleInit" class="form-control" />
+
+        <label asp-for="BowlerAddress">Bowler's Address</label>
+        <input asp-for="BowlerAddress" class="form-control" />
+
+        <label asp-for="BowlerCity">Bowler's City</label>
+        <input asp-for="BowlerCity" class="form-control" />
+
+        <label asp-for="BowlerState">Bowler's State</label>
+        <input asp-for="BowlerState" class="form-control" />
+
+        <label asp-for="BowlerZip">Bowler's Zipcode</label>
+        <input asp-for="BowlerZip" class="form-control" />
+
+        <label asp-for="BowlerPhoneNumber">Bowler's Phone Number</label>
+        <input asp-for="BowlerAddress" class="form-control" />
+
+
+    </div>
+
+    <!-- submission button -->
+    <button type="submit" class="btn btn-sm btn-primary">Save Bowler</button>
+
+</form>
